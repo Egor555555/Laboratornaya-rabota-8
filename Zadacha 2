@@ -1,0 +1,24 @@
+//Дан целочисленный массив размера n. Переписать в новый целочисленный массив того же размера сначала элементы массива с чётными номерами, а затем - с нечётными.
+#include <iostream>
+using namespace std;
+int main() {
+	int n;
+	cin >> n;
+	int* x;
+	int* y;
+	x = new int[n];
+	y = new int[n];
+	int i;
+	for (i = 0; i < n; i++)
+		cin >> x[i];
+	int k = 0;
+	for (i = 1; i < n; i += 2) {
+		y[k] = x[i];
+		k++;
+	}for (i = 0;i < n; i += 2) {
+		y[k] = x[i];
+		k++;
+	}for (i = 0; i < k; i++) {
+		cout << y[i] << " ";
+	}
+}
