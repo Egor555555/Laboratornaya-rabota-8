@@ -1,0 +1,19 @@
+//Дан массив размера n и целое число k (1<=k<=n). Перед элементом массива с порядковым номером k вставить новый элемент с нулевым значением.
+#include <iostream>
+using namespace std;
+int main() {
+	int n, k;
+	cin >> n >> k;
+	float* a;
+	a = new float[n];
+	int i;
+	for (i = 0; i < n; i++)
+		cin >> a[i];
+	n++;
+	for (i = n - 1; i >= k; i--) {
+		a[i] = a[i - 1];
+	}a[k - 1] = 0;
+	for (i = 0;i < n;i++) {
+		cout << a[i]<< " ";
+	}
+}
